@@ -13,9 +13,15 @@
         </div>
 
 
-        <p>Hello world!</p>
-        <p>It works!</p>
-        <p><em>emphizize</em></p>
-        <p><strong>strong</strong></p>
+        {% for post in posts %}
+            <div>
+                <p>published: {{post.published_date}} </p>
+                <h1><a href="">title: {{post.title}} </a></h1>
+                <p>{{post.text|linebreaksbr}}</p>
+
+                <p>fin</p>
+            </div>
+            
+        {% endfor %}
     </body>
 </html>
